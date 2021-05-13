@@ -7,7 +7,7 @@ namespace SpecflowTutorial.StepDefinitions
     public class ReturningLocationDataBasedOnCountryAndZipCodeSteps
     {
         [Given(@"the country code (US|CA) and zip code (.*)")]
-        public void GivenTheCountryCodeUSAndZipCode(string countryCode, int zipCode)
+        public void GivenTheCountryCodeUSAndZipCode(string countryCode, string zipCode)
         {
             
         }

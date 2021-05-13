@@ -20,22 +20,24 @@ namespace SpecflowTutorial.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.8.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("scenario outline demo")]
-    public partial class ScenarioOutlineDemoFeature
+    [NUnit.Framework.DescriptionAttribute("learn how to use Background to replace multiple repeatitive Givens in different s" +
+        "cenarios.")]
+    public partial class LearnHowToUseBackgroundToReplaceMultipleRepeatitiveGivensInDifferentScenarios_Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ScenarioOuline.feature"
+#line 1 "Background.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "scenario outline demo", @"As a cutomer of the Zippopotam.us API
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "learn how to use Background to replace multiple repeatitive Givens in different s" +
+                    "cenarios.", @"As a cutomer of the Zippopotam.us API
 I want to recieve location data matching the country code and zip code I supply
 I want to receive location data matching the country code and zip code I supply
 So I can use this data to auto-complete forms on my web site.", ProgrammingLanguage.CSharp, ((string[])(null)));
@@ -76,20 +78,23 @@ So I can use this data to auto-complete forms on my web site.", ProgrammingLangu
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Country and zip codes yield the right place names")]
-        [NUnit.Framework.TestCaseAttribute("US", "90210", "Bevery Hills", null)]
-        [NUnit.Framework.TestCaseAttribute("US", "22222", "Arlington", null)]
-        [NUnit.Framework.TestCaseAttribute("CA", "Y1A", "WhiteHorse", null)]
-        public virtual void CountryAndZipCodesYieldTheRightPlaceNames(string countryCode, string zipCode, string placeName, string[] exampleTags)
+        public virtual void FeatureBackground()
         {
-            string[] tagsOfScenario = exampleTags;
+#line 8
+#line hidden
+#line 9
+testRunner.Given("the country code US and zip code 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("An existing country and zip code yields the correct place name")]
+        public virtual void AnExistingCountryAndZipCodeYieldsTheCorrectPlaceName()
+        {
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("countryCode", countryCode);
-            argumentsOfScenario.Add("zipCode", zipCode);
-            argumentsOfScenario.Add("placeName", placeName);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country and zip codes yield the right place names", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("An existing country and zip code yields the correct place name", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -110,13 +115,53 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given(string.Format("the country code {0} and zip code {1}", countryCode, zipCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.FeatureBackground();
 #line hidden
-#line 9
+#line 12
  testRunner.When("I request the location corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
- testRunner.Then(string.Format("the response contains the place name {0}", placeName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+ testRunner.Then("the response contains the place name Beverly Hills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("An existing country and zip code yields the right number of results")]
+        public virtual void AnExistingCountryAndZipCodeYieldsTheRightNumberOfResults()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("An existing country and zip code yields the right number of results", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 15
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 8
+this.FeatureBackground();
+#line hidden
+#line 16
+testRunner.When("I request the locations corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+testRunner.Then("the response contains exactly 1 location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

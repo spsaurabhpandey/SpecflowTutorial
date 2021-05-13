@@ -12,3 +12,4 @@ Scenario Outline: Country and zip codes yield the right place names
 	| countryCode | zipCode | placeName    |
 	| US          | 90210   | Bevery Hills |
 	| US          | 22222   | Arlington    |
+	| CA          | Y1A     | WhiteHorse   |
