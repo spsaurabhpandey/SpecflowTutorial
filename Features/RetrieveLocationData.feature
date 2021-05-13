@@ -6,7 +6,7 @@ So I can use this data to auto-complete forms on my web site.
 
 Scenario: An existing country and zip code yields the correct place name
 	Given the country code US and zip code 90210
-	When I request the locations corresponding to these codes
+	When I request the location corresponding to these codes
 	Then the response contains the place name Beverly Hills
 
 Scenario: An existing country and zip code yields the right number of results
