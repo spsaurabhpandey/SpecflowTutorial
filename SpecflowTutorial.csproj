@@ -79,6 +79,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\RetrieveLocationData.feature.cs" />
+    <Compile Include="Features\ScenarioOuline.feature.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\ReturningLocationDataBasedOnCountryAndZipCodeSteps.cs" />
@@ -86,6 +88,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\RetrieveLocationData.feature" />
+    <None Include="Features\ScenarioOuline.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
