@@ -85,7 +85,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\ReturningLocationDataBasedOnCountryAndZipCodeSteps.cs" />
-    <Compile Include="StepDefinitions\SpecflowAssistSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
