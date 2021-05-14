@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomClasses\CustomClasses.cs" />
     <Compile Include="Features\RetrieveLocationData.feature.cs" />
     <Compile Include="Features\ScenarioOuline.feature.cs" />
     <Compile Include="Program.cs" />
